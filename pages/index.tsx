@@ -1,13 +1,22 @@
+import Navbar from "@/components/Navbar";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
 const Home: NextPage = () => {
   return (
-    <section className="flex h-screen w-full items-center justify-center font-primary">
+    <section id="home" className="h-screen w-full font-primary text-white">
       <NextSeo
         title="Space Tourism Website"
         description="Next.js Boilerplate configuration with Eslint, Prettier and Husky"
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/assets/favicon-32x32.png",
+          },
+        ]}
       />
+      <Navbar />
+      <div className="container mx-auto" />
     </section>
   );
 };
