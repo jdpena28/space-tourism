@@ -4,11 +4,12 @@ module.exports = {
     fontFamily: {
       primary: ["Bellefair", "serif"],
       secondary: ["Barlow Condensed", "sans-serif"],
+      tertiary: ["Barlow", "sans-serif"],
     },
     extend: {
       colors: {
         primary: "#0B0D17",
-        highlight: "D0D6F9",
+        highlight: "#D0D6F9",
       },
       fontSize: {
         heading1: "150px",
