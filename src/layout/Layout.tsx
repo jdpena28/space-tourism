@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import { NextSeo } from "next-seo";
 import React from "react";
 
-const Layout: React.FC<LayoutProps> = ({ children, id }) => {
+const Layout: React.FC<LayoutProps> = ({ children, id, className }) => {
   return (
     <section id={id} className="h-screen bg-cover font-primary text-white">
       <NextSeo
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children, id }) => {
         ]}
       />
       <Navbar />
-      <div className="container mx-auto">{children}</div>
+      <div className={`${className}`}>{children}</div>
     </section>
   );
 };

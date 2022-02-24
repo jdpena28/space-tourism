@@ -7,4 +7,5 @@ interface TextLinkProps {
 interface LayoutProps {
   children: React.ReactNode;
   id: string;
+  className?: string;
 }
