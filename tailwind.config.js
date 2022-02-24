@@ -12,27 +12,27 @@ module.exports = {
         highlight: "#D0D6F9",
       },
       fontSize: {
-        heading1: "150px",
-        heading2: "100px",
-        heading3: "56px",
-        heading4: "32px",
+        heading1: "9.375rem",
+        heading2: "6.25rem",
+        heading3: "3.5rem",
+        heading4: "2rem",
         heading5: [
-          "28px",
+          "1.75rem",
           {
-            letterSpacing: "4.75px",
+            letterSpacing: "0.297rem",
           },
         ],
-        subheading1: "28px",
+        subheading1: "1.75rem",
         subheading2: [
-          "14px",
+          "0.875rem",
           {
-            letterSpacing: "2.35px",
+            letterSpacing: "0.147rem",
           },
         ],
         navText: [
-          "16px",
+          "1rem",
           {
-            letterSpacing: "2.7px",
+            letterSpacing: ".169rem",
           },
         ],
       },
