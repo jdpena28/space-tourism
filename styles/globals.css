@@ -3,6 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
+.containers {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .containers {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .containers {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .containers {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .containers {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .containers {
+    max-width: 1536px;
+  }
+}
 #home {
   background-image: url("/assets/home/background-home-desktop.jpg");
+}
+#moon {
+  background-image: url("/assets/destination/background-destination-desktop.jpg");
 }
