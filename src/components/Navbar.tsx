@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const TextLink: React.FC<TextLinkProps> = ({ navCount, navText }) => {
   return (
+    // eslint-disable-next-line @next/next/link-passhref
     <Link href="/">
       <div className="cursor-pointer space-x-2 border-b-2 border-transparent py-4  hover:border-gray-400  active:border-white">
         <span className="font-bold">{navCount}</span>

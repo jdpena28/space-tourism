@@ -17,7 +17,7 @@ const Home: NextPage = () => {
             this world experience!
           </p>
         </div>
-        <div className="h-72 w-72 rounded-full  bg-white text-center leading-[18rem] ring-gray-400/50 transition duration-300 ease-in-out hover:ring-[40px] ">
+        <div className="h-72 w-72 cursor-pointer rounded-full bg-white text-center leading-[18rem] ring-gray-400/50 transition duration-300 ease-in-out hover:ring-[40px]">
           <span className="text-heading4 text-black">EXPLORE</span>
         </div>
       </div>
