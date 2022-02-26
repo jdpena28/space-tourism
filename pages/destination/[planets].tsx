@@ -22,7 +22,7 @@ const Planets: NextPage = () => {
   return (
     <Layout
       id={datas?.name.toLowerCase()}
-      className="containers m-auto flex h-full items-center justify-around">
+      className="containers flex h-full items-center justify-around">
       <div className="mt-8 space-y-6">
         <Subheading num="01" text="PICK YOUR DESTINATION" />
         <Image
@@ -34,7 +34,7 @@ const Planets: NextPage = () => {
           width={445}
         />
       </div>
-      <div className="">
+      <div>
         <Tabs />
         <h2 className="text-heading2">{datas?.name.toUpperCase()}</h2>
         <p className="w-96 font-tertiary">{datas?.description}</p>
