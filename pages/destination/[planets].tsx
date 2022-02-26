@@ -5,6 +5,7 @@ import Image from "next/image";
 import Layout from "@/layout/Layout";
 import Tabs from "@/components/Tabs";
 import { useRouter } from "next/router";
+import Subheading from "@/components/Subheading";
 
 const Planets: NextPage = () => {
   const router = useRouter();
@@ -23,10 +24,7 @@ const Planets: NextPage = () => {
       id={datas?.name.toLowerCase()}
       className="containers m-auto flex h-full items-center justify-around">
       <div className="mt-8 space-y-6">
-        <p className="mb-6 font-secondary text-heading5">
-          <span className="font-bold text-slate-500">01</span>&ensp;PICK YOUR
-          DESTINATION
-        </p>
+        <Subheading num="01" text="PICK YOUR DESTINATION" />
         <Image
           src={
             datas ? datas.images.webp : "/assets/destination/image-moon.webp"
