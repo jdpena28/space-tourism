@@ -9,3 +9,7 @@ interface LayoutProps {
   id: string;
   className?: string;
 }
+// Tabs.tsx
+interface LinktabsProps {
+  text: string;
+}
