@@ -16,7 +16,6 @@ const Planets: NextPage = () => {
 
   useEffect(() => {
     setDatas(findPlanet(router.query.planets));
-    console.log(datas);
   }, [router.query.planets]);
 
   return (
