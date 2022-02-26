@@ -42,11 +42,15 @@ const Planets: NextPage = () => {
         <br />
         <div className="flex gap-x-10 text-subheading1">
           <div>
-            <p className="font-secondary text-subheading2">AVG. DISTANCE</p>
+            <p className="font-secondary text-subheading2 text-gray-400">
+              AVG. DISTANCE
+            </p>
             <p className="uppercase">{datas?.distance}</p>
           </div>
           <div>
-            <p className="font-secondary text-subheading2">EST. TRAVEL TIME</p>
+            <p className="font-secondary text-subheading2 text-gray-400">
+              EST. TRAVEL TIME
+            </p>
             <p className="uppercase">{datas?.travel}</p>
           </div>
         </div>
