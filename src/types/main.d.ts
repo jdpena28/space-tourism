@@ -1,3 +1,4 @@
+// [planet].tsx
 interface dataProps {
   name: string;
   images: {
@@ -7,4 +8,15 @@ interface dataProps {
   description: string;
   distance: string;
   travel: string;
+}
+
+// [team].tsx
+interface teamProps {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  role: string;
+  bio: string;
 }

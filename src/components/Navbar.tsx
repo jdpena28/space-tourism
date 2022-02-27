@@ -27,7 +27,7 @@ const Navbar = () => {
     },
     {
       text: "CREW",
-      link: "/",
+      link: "/crew/douglas-hurley",
     },
     {
       text: "TECHNOLOGY",
