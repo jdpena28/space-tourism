@@ -16,6 +16,8 @@ interface teamProps {
   images: {
     png: string;
     webp: string;
+    height: number;
+    width: number;
   };
   role: string;
   bio: string;

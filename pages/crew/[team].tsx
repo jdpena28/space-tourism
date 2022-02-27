@@ -5,8 +5,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import data from "@/data.json";
+import type { NextPage } from "next";
 
-const Team = () => {
+const Team: NextPage = () => {
   const router = useRouter();
   const [datas, setDatas] = useState<teamProps | undefined>();
 
@@ -33,15 +34,16 @@ const Team = () => {
         </p>
         <Indicator />
       </div>
-      <div className="place-self-end overflow-y-hidden">
+      <div className="h-[90%] w-[90%] place-self-end overflow-y-hidden object-cover">
         <Image
           src={
             datas
               ? datas?.images.webp
               : "/assets/crew/image-douglas-hurley.webp"
           }
-          height={712}
-          width={568.07}
+          height={datas ? datas?.images.height : 712}
+          width={datas ? datas?.images.width : 568}
+          layout="responsive"
         />
       </div>
     </Layout>
