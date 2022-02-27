@@ -21,7 +21,7 @@ const Planets: NextPage = () => {
 
   return (
     <Layout
-      id={datas?.name.toLowerCase()}
+      id="planet"
       className="containers mx-auto flex h-full items-center justify-around">
       <div className="mt-8 space-y-6">
         <Subheading num="01" text="PICK YOUR DESTINATION" />
