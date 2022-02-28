@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <Layout id="home">
-      <div className="fixed bottom-8 flex w-full items-center justify-around">
+    <Layout id="home" className="h-full">
+      <div className="fixed bottom-8 flex w-full items-center justify-around lg:static lg:h-full lg:flex-col lg:justify-center lg:gap-y-20 lg:text-center">
         <div>
           <p className="font-secondary text-heading5  text-highlight">
             SO, YOU WANT TO TRAVEL TO
           </p>
           <h1 className="text-heading1 ">SPACE</h1>
-          <p className="w-[24.6rem] font-tertiary text-highlight">
+          <p className="w-[24.6rem] font-tertiary text-highlight lg:w-[27rem]">
             Let&apos;s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we&apos;ll give you a truly out of

@@ -20,6 +20,9 @@
   .containers {
     max-width: 1024px;
   }
+  #home {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
 }
 @media (min-width: 1280px) {
   .containers {
@@ -33,6 +36,11 @@
 }
 #home {
   background-image: url("/assets/home/background-home-desktop.jpg");
+}
+@media (max-width: 1024px) {
+  #home {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
 }
 #planet {
   background-image: url("/assets/destination/background-destination-desktop.jpg");
