@@ -6,6 +6,7 @@ import Layout from "@/layout/Layout";
 import Tabs from "@/components/Tabs";
 import { useRouter } from "next/router";
 import Subheading from "@/components/Subheading";
+import { dataProps } from "@/types/main";
 
 const Planets: NextPage = () => {
   const router = useRouter();

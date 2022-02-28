@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import data from "@/data.json";
 import type { NextPage } from "next";
+import { teamProps } from "@/types/main";
 
 const Team: NextPage = () => {
   const router = useRouter();
