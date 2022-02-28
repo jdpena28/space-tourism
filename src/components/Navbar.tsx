@@ -38,7 +38,7 @@ const Navbar = () => {
     <nav className="absolute flex w-full items-center justify-between pt-3 pl-6 font-secondary">
       <Image src="/assets/shared/logo.svg" height={48} width={48} />
       <div className="z-30 -mr-40 h-[1px]  w-[40%] bg-[#979797] lg:hidden" />
-      <div className="z-20 flex w-[50%] justify-center gap-x-6 bg-white/10 backdrop-blur-md lg:text-sm">
+      <div className="z-20 flex w-[50%] justify-center gap-x-6 bg-white/10 backdrop-blur-md lg:w-max lg:pl-4 lg:text-sm">
         {data.map((item, count) => {
           return (
             <TextLink

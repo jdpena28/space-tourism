@@ -23,7 +23,7 @@ const Planets: NextPage = () => {
   return (
     <Layout
       id="planet"
-      className="containers mx-auto flex h-full items-center justify-around">
+      className="containers mx-auto flex h-full items-center justify-around lg:flex-col">
       <div className="mt-8 space-y-6">
         <Subheading num="01" text="PICK YOUR DESTINATION" />
         <Image
@@ -35,13 +35,13 @@ const Planets: NextPage = () => {
           width={445}
         />
       </div>
-      <div>
+      <div className="lg:text-center">
         <Tabs />
         <h2 className="text-heading2">{datas?.name.toUpperCase()}</h2>
         <p className="w-96 font-tertiary">{datas?.description}</p>
         <div className="mt-12 h-[2px] w-full bg-[#383B4B]" />
         <br />
-        <div className="flex gap-x-10 text-subheading1">
+        <div className="flex gap-x-10 text-subheading1 lg:justify-around">
           <div>
             <p className="font-secondary text-subheading2 text-gray-400">
               AVG. DISTANCE
