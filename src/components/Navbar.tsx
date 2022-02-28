@@ -31,7 +31,7 @@ const Navbar = () => {
     },
     {
       text: "TECHNOLOGY",
-      link: "/",
+      link: "/technology/launch-vehicle",
     },
   ];
   return (

@@ -20,3 +20,8 @@ interface LinktabsProps {
   text: string;
   routes: string;
 }
+// SliderLInkProps.tsx
+interface SliderLinkProps {
+  route: string;
+  num: number;
+}
