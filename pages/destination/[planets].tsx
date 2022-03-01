@@ -24,9 +24,19 @@ const Planets: NextPage = () => {
     <Layout
       id="planet"
       className="containers mx-auto flex h-full items-center justify-around lg:flex-col">
-      <div className="mt-8 space-y-6">
-        <Subheading num="01" text="PICK YOUR DESTINATION" />
+      <Subheading
+        num="01"
+        text="PICK YOUR DESTINATION"
+        className="fixed left-4 top-24 xl:hidden lg:block"
+      />
+      <div className="mt-8 space-y-6 lg:mt-14">
+        <Subheading
+          num="01"
+          text="PICK YOUR DESTINATION"
+          className="lg:hidden"
+        />
         <Image
+          className="lg:pt-12"
           src={
             datas ? datas.images.webp : "/assets/destination/image-moon.webp"
           }

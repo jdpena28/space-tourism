@@ -14,6 +14,7 @@ interface LayoutProps {
 interface SubheadingProps {
   num: string;
   text: string;
+  className?: string;
 }
 // Tabs.tsx
 interface LinktabsProps {
