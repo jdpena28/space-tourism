@@ -22,24 +22,25 @@ const Equipment: NextPage = () => {
   return (
     <Layout
       id="technology"
-      className="mx-auto grid h-full grid-cols-2 items-center justify-items-center">
+      className="mx-auto grid h-full grid-cols-2 items-center justify-items-center lg:flex lg:flex-col-reverse  lg:justify-center">
       <div>
-        <Subheading num="03" text="SPACE LAUNCH 101" />
+        <Subheading num="03" text="SPACE LAUNCH 101" className="lg:hidden" />
         <br /> <br />
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 lg:block lg:text-center">
           <Slider />
-          <div>
+          <div className="pt-11">
             <h3 className="font-secondary text-navText text-highlight">
               The Terminology...
             </h3>
             <p className="w-[30rem] text-heading3 uppercase">{datas?.name}</p>
-            <p className="w-[27rem] font-tertiary text-lg text-highlight">
+            <p className="w-[27rem] font-tertiary text-lg text-highlight lg:w-[30rem]">
               {datas?.description}
             </p>
           </div>
         </div>
       </div>
-      <div className="justify-self-end 2xl:mt-8">
+      {/* Desktop View Image */}
+      <div className="justify-self-end 2xl:mt-8 lg:hidden">
         <Image
           src={
             datas
@@ -50,6 +51,22 @@ const Equipment: NextPage = () => {
           height={496}
         />
       </div>
+      <div className="justify-self-end 2xl:mt-8 lg:mt-0">
+        <Image
+          src={
+            datas
+              ? datas?.images.landscape
+              : "/assets/technology/image-launch-vehicle-landscape.jpg"
+          }
+          width={768}
+          height={310}
+        />
+      </div>
+      <Subheading
+        num="03"
+        text="SPACE LAUNCH 101"
+        className="fixed left-4 top-24 xl:hidden lg:block"
+      />
     </Layout>
   );
 };

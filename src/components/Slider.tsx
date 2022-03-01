@@ -14,7 +14,7 @@ const SliderLink: React.FC<SliderLinkProps> = ({ route, num }) => {
 
 const Slider = () => {
   return (
-    <div className="space-y-4">
+    <div className="items-center justify-center gap-x-4 space-y-4 lg:flex lg:space-y-0">
       {data.technology.map((item, index) => {
         return (
           <SliderLink
