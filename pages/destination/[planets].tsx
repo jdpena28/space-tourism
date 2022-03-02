@@ -27,7 +27,7 @@ const Planets: NextPage = () => {
       <Subheading
         num="01"
         text="PICK YOUR DESTINATION"
-        className="fixed left-4 top-24 xl:hidden lg:block"
+        className="fixed left-4 top-24 hidden lg:block"
       />
       <div className="mt-8 space-y-6 lg:mt-14">
         <Subheading
