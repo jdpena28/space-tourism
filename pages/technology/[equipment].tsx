@@ -40,7 +40,7 @@ const Equipment: NextPage = () => {
         </div>
       </div>
       {/* Desktop View Image */}
-      <div className="justify-self-end 2xl:mt-8 lg:hidden">
+      <div className="block justify-self-end 2xl:mt-20 lg:hidden">
         <Image
           src={
             datas
@@ -51,7 +51,7 @@ const Equipment: NextPage = () => {
           height={496}
         />
       </div>
-      <div className="justify-self-end 2xl:mt-8 lg:mt-0">
+      <div className="hidden justify-self-end lg:block">
         <Image
           src={
             datas
@@ -65,7 +65,7 @@ const Equipment: NextPage = () => {
       <Subheading
         num="03"
         text="SPACE LAUNCH 101"
-        className="fixed left-4 top-24 xl:hidden lg:block"
+        className="fixed left-4 top-24 hidden lg:block"
       />
     </Layout>
   );
