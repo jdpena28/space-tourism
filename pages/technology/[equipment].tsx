@@ -28,7 +28,7 @@ const Equipment: NextPage = () => {
         <br /> <br />
         <div className="flex space-x-8 lg:block lg:text-center">
           <Slider />
-          <div className="pt-11">
+          <div className="pt-1">
             <h3 className="font-secondary text-navText text-highlight">
               The Terminology...
             </h3>
