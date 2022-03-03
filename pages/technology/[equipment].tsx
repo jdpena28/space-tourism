@@ -62,11 +62,9 @@ const Equipment: NextPage = () => {
           height={310}
         />
       </div>
-      <Subheading
-        num="03"
-        text="SPACE LAUNCH 101"
-        className="fixed left-4 top-24 hidden lg:block"
-      />
+      <div className="fixed left-4 top-24 hidden lg:block">
+        <Subheading num="03" text="SPACE LAUNCH 101" />
+      </div>
     </Layout>
   );
 };
