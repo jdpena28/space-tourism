@@ -3,6 +3,7 @@ interface TextLinkProps {
   navCount: string;
   navText: string;
   navLink: string;
+  isActive: string;
 }
 // Layout.tsx
 interface LayoutProps {

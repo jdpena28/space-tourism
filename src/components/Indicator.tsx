@@ -1,11 +1,21 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import data from "@/data.json";
+import { useRouter } from "next/router";
+import { nanoid } from "nanoid";
 
 const NavLink = ({ routes }: { routes: string }) => {
+  const { query, asPath } = useRouter();
+  useEffect(() => {
+    console.log(query);
+  }, []);
   return (
     <Link href={`${routes}`}>
-      <div className="h-4 w-4 cursor-pointer rounded-full bg-gray-500" />
+      <div
+        className={`h-4 w-4 cursor-pointer rounded-full bg-gray-500 hover:bg-gray-400 ${
+          asPath === `/crew/${routes}` ? "!bg-white" : ""
+        }`}
+      />
     </Link>
   );
 };
@@ -15,7 +25,7 @@ const Indicator = () => {
   return (
     <div className="mt-24 flex gap-x-4">
       {routes.map((i) => {
-        return <NavLink routes={i} />;
+        return <NavLink key={nanoid()} routes={i} />;
       })}
     </div>
   );

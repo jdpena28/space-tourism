@@ -1,11 +1,19 @@
 import Link from "next/link";
 import data from "@/data.json";
+import { useRouter } from "next/router";
 import React from "react";
 
 const SliderLink: React.FC<SliderLinkProps> = ({ route, num }) => {
+  const { asPath } = useRouter();
+
   return (
     <Link href={route}>
-      <div className="h-[80px] w-[80px] cursor-pointer rounded-full border-2 border-gray-400 text-center text-heading4 leading-[80px] hover:border-white">
+      <div
+        className={`h-[80px] w-[80px] cursor-pointer rounded-full border-2 border-gray-400 text-center text-heading4 leading-[80px] hover:border-white ${
+          asPath === `/technology/${route}`
+            ? "border-none bg-white text-black"
+            : ""
+        }`}>
         {num}
       </div>
     </Link>
