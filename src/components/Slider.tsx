@@ -2,6 +2,7 @@ import Link from "next/link";
 import data from "@/data.json";
 import { useRouter } from "next/router";
 import React from "react";
+import { nanoid } from "nanoid";
 
 const SliderLink: React.FC<SliderLinkProps> = ({ route, num }) => {
   const { asPath } = useRouter();
@@ -26,6 +27,7 @@ const Slider = () => {
       {data.technology.map((item, index) => {
         return (
           <SliderLink
+            key={nanoid()}
             route={`${item.name.replace(" ", "-").toLowerCase()}`}
             num={index + 1}
           />

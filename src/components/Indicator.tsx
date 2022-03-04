@@ -5,10 +5,8 @@ import { useRouter } from "next/router";
 import { nanoid } from "nanoid";
 
 const NavLink = ({ routes }: { routes: string }) => {
-  const { query, asPath } = useRouter();
-  useEffect(() => {
-    console.log(query);
-  }, []);
+  const { asPath } = useRouter();
+
   return (
     <Link href={`${routes}`}>
       <div
