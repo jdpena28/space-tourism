@@ -11,14 +11,17 @@ const TextLink: React.FC<TextLinkProps> = ({
   navLink,
   isActive,
 }) => {
-  const { asPath } = useRouter();
+  const { asPath, pathname } = useRouter();
+  useEffect(() => {
+    console.log(pathname);
+  }, []);
 
   return (
     // eslint-disable-next-line @next/next/link-passhref
     <Link href={navLink}>
       <div
         className={`cursor-pointer space-x-2 border-b-2 border-transparent py-4  hover:border-gray-400  ${
-          isActive === asPath ? "border-white" : ""
+          pathname.includes(navText.toLowerCase()) ? "border-white" : ""
         }`}>
         <span className="font-bold">{navCount}</span>
         <span className="text-navText font-thin">{navText}</span>
