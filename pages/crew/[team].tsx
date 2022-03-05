@@ -35,7 +35,7 @@ const Team: NextPage = () => {
         </p>
         <Indicator />
       </div>
-      <div className="h-[90%] w-[90%] place-self-end overflow-y-hidden object-contain  2xl:h-full 2xl:w-full">
+      <div className="h-max w-full overflow-y-hidden  object-contain 2xl:h-[90%]  2xl:w-[90%] 2xl:place-self-end">
         <Image
           src={
             datas
