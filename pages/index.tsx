@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <Layout id="home" className="h-full">
-      <div className="fixed bottom-8 flex w-full items-center justify-around lg:static lg:h-full lg:flex-col lg:justify-center lg:gap-y-20 lg:text-center">
+    <Layout id="home" className="flex h-full items-center">
+      <div className="fixed bottom-8 flex w-full items-center justify-around lg:static lg:mt-8 lg:h-max lg:flex-col  lg:gap-y-20 lg:text-center">
         <div>
           <p className="font-secondary text-heading5  text-highlight">
             SO, YOU WANT TO TRAVEL TO
