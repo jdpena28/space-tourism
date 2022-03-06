@@ -23,8 +23,8 @@ const Planets: NextPage = () => {
   return (
     <Layout
       id="planet"
-      className="containers mx-auto flex h-full items-center justify-around lg:flex-col">
-      <div className="fixed left-4 top-24 hidden lg:block">
+      className="containers mx-auto flex h-screen items-center justify-around xl:h-max lg:flex-col">
+      <div className="hidden lg:block">
         <Subheading num="01" text="PICK YOUR DESTINATION" />
       </div>
       <div className="mt-8 space-y-6 lg:mt-14">
