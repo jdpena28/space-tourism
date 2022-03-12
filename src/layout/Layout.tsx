@@ -4,7 +4,7 @@ import React from "react";
 
 const Layout: React.FC<LayoutProps> = ({ children, id, className }) => {
   return (
-    <section id={id} className="h-screen bg-cover font-primary text-white">
+    <section id={id} className="bg-cover font-primary text-white ">
       <NextSeo
         title="Space Tourism Website"
         description="Next.js Boilerplate configuration with Eslint, Prettier and Husky"
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children, id, className }) => {
         ]}
       />
       <Navbar />
-      <div className={`${className}`}>{children}</div>
+      <div className="flex h-screen items-center">{children}</div>
     </section>
   );
 };
