@@ -3,39 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.containers {
-  width: 100%;
-}
-@media (min-width: 640px) {
-  .containers {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-  .containers {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-  .containers {
-    max-width: 1024px;
-  }
-  #home {
-    background-image: url("/assets/home/background-home-tablet.jpg");
-  }
-}
-@media (min-width: 1280px) {
-  .containers {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-  .containers {
-    max-width: 1536px;
-  }
-}
 #home {
-  background-image: url("/assets/home/background-home-desktop.jpg");
+  background-image: url("/assets/home/background-home-mobile.jpg");
 }
 #planet {
   background-image: url("/assets/destination/background-destination-desktop.jpg");
@@ -47,11 +16,13 @@
   background-image: url("/assets/technology/background-technology-desktop.jpg");
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 767px) {
   #home {
     background-image: url("/assets/home/background-home-tablet.jpg");
   }
-  #planet {
-    background-image: url("/assets/destination/background-destination-tablet.jpg");
+}
+@media (min-width: 1024px) {
+  #home {
+    background-image: url("/assets/home/background-home-desktop.jpg");
   }
 }
