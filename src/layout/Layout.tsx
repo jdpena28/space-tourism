@@ -4,7 +4,7 @@ import React from "react";
 
 const Layout: React.FC<LayoutProps> = ({ children, id, className }) => {
   return (
-    <section id={id} className="bg-cover font-primary text-white ">
+    <section id={id} className="z-10 bg-cover font-primary text-white">
       <NextSeo
         title="Space Tourism Website"
         description="Next.js Boilerplate configuration with Eslint, Prettier and Husky"
