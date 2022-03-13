@@ -57,7 +57,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="fixed top-0 flex w-full items-center justify-between p-5">
+    <nav className="fixed top-0 z-50 flex w-full items-center justify-between p-5">
       <Image src="/assets/shared/logo.svg" height={48} width={48} />
       {/*  mobile menu */}
       {isOpen ? (
@@ -86,7 +86,7 @@ const Navbar = () => {
         </svg>
       )}
       {isOpen && (
-        <div className="absolute right-0 top-0 z-40 h-screen w-[70%] bg-white/10 backdrop-blur-md">
+        <div className="absolute right-0 top-0 z-40 h-screen w-[70%] bg-white/10 backdrop-blur-lg">
           <div className="flex h-[70%] flex-col justify-center gap-y-8 pl-16">
             <Link href="/">
               <div
