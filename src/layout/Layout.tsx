@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children, id, className }) => {
         ]}
       />
       <Navbar />
-      <div className="flex h-screen items-center">{children}</div>
+      <div className="flex h-auto  min-h-screen items-center">{children}</div>
     </section>
   );
 };
