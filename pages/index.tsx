@@ -5,7 +5,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <Layout id="home">
-      <div className="container m-auto flex h-full flex-col justify-around py-2 pt-16 text-center lg:fixed lg:bottom-9 lg:left-0 lg:right-0 lg:h-max lg:flex-row lg:items-center">
+      <div className="container  m-auto flex h-screen flex-col justify-around py-2 pt-16 text-center lg:fixed lg:bottom-9 lg:left-0 lg:right-0 lg:h-max lg:flex-row lg:items-center">
         <div>
           <p className="font-secondary text-heading5  text-highlight">
             SO, YOU WANT TO TRAVEL TO
