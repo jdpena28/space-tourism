@@ -22,7 +22,7 @@ const Planet: NextPage = () => {
   }, [router.query.planet]);
   return (
     <Layout id="planet">
-      <div className="container m-auto flex h-full flex-col  justify-around py-2 pt-24 text-center lg:text-left">
+      <div className="container m-auto flex h-full flex-col justify-around py-2 pt-24 text-center lg:text-left">
         <Subheading
           num="01"
           text="PICK YOUR DESTINATION"
