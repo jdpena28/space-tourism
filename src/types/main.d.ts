@@ -1,7 +1,7 @@
 import { StringifyOptions } from "querystring";
 
 // [planet].tsx
-interface dataProps {
+export interface planetProps {
   name: string;
   images: {
     png: string;
