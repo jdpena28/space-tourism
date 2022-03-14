@@ -21,7 +21,7 @@ const NavLink = ({ routes }: { routes: string }) => {
 const Indicator = () => {
   const routes = data.crew.map((i) => i.name.replace(" ", "-").toLowerCase());
   return (
-    <div className="mx-auto flex  w-max gap-x-4">
+    <div className="mx-auto flex  w-max gap-x-4 md:order-3 lg:m-0">
       {routes.map((i) => {
         return <NavLink key={nanoid()} routes={i} />;
       })}
