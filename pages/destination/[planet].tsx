@@ -26,7 +26,7 @@ const Planet: NextPage = () => {
         <Subheading
           num="01"
           text="PICK YOUR DESTINATION"
-          className="ml-12 text-center md:text-left"
+          className="text-center md:ml-12 md:text-left"
         />
         <div className="items-center lg:flex">
           <div className="my-4 w-full px-6">
