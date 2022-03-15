@@ -13,7 +13,7 @@ export interface planetProps {
 }
 
 // [team].tsx
-interface teamProps {
+export interface teamProps {
   name: string;
   images: {
     png: string;
