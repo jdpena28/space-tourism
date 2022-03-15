@@ -10,7 +10,7 @@ const SliderLink: React.FC<SliderLinkProps> = ({ route, num }) => {
   return (
     <Link href={route}>
       <div
-        className={`h-[80px] w-[80px] cursor-pointer rounded-full border-2 border-gray-400 text-center text-heading4 leading-[80px] hover:border-white ${
+        className={`h-[40px] w-[40px] cursor-pointer rounded-full border-2 border-gray-400 text-center text-lg leading-[38px] hover:border-white md:h-[58px] md:w-[58px] md:text-heading4 md:leading-[58px] ${
           asPath === `/technology/${route}`
             ? "border-none bg-white text-black"
             : ""
@@ -23,7 +23,7 @@ const SliderLink: React.FC<SliderLinkProps> = ({ route, num }) => {
 
 const Slider = () => {
   return (
-    <div className="items-center justify-center gap-x-4 space-y-4 lg:flex lg:space-y-0">
+    <div className="flex items-center justify-center gap-x-4 lg:flex-col lg:gap-y-4">
       {data.technology.map((item, index) => {
         return (
           <SliderLink
