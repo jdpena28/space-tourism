@@ -2,9 +2,23 @@ import Slider from "@/components/Slider";
 import Subheading from "@/components/Subheading";
 import Layout from "@/layout/Layout";
 import Image from "next/image";
-import React from "react";
+import { useRouter } from "next/router";
+import data from "@/data.json";
+import React, { useEffect, useState } from "react";
+import { equipmentProps } from "@/types/main";
 
 const Equipment = () => {
+  const [datas, setDatas] = useState<equipmentProps | undefined>();
+  const router = useRouter();
+  const findEquipment = (routes: string | string[] | undefined) => {
+    const equipment = data.technology.find((i) => {
+      return i.name.replace(" ", "-").toLowerCase() === routes;
+    });
+    return equipment;
+  };
+  useEffect(() => {
+    setDatas(findEquipment(router.query.equipment));
+  }, [router.query.equipment]);
   return (
     <Layout id="technology">
       <div className="container m-auto flex h-full flex-col justify-around py-2 pt-24 text-center lg:text-left">
@@ -13,17 +27,25 @@ const Equipment = () => {
           text="SPACE LAUNCH 101"
           className="text-center  md:text-left"
         />
-        <div className="lg:flex lg:flex-row-reverse lg:items-center">
+        <div className="lg:flex lg:flex-row-reverse lg:items-center 2xl:-mr-52">
           <div className="my-5 lg:hidden">
             <Image
-              src="/assets/technology/image-launch-vehicle-landscape.jpg"
+              src={
+                datas
+                  ? datas?.images.landscape
+                  : "/assets/technology/image-launch-vehicle-landscape.jpg"
+              }
               width={768}
               height={310}
             />
           </div>
           <div className="my-5 hidden lg:block">
             <Image
-              src="/assets/technology/image-launch-vehicle-portrait.jpg"
+              src={
+                datas
+                  ? datas?.images.portrait
+                  : "/assets/technology/image-launch-vehicle-portrait.jpg"
+              }
               width={486}
               height={496}
             />
@@ -35,14 +57,10 @@ const Equipment = () => {
                 THE TERMINOLOGY ...
               </p>
               <h3 className="text-subheading1 uppercase lg:text-heading3">
-                Launch Vehicle
+                {datas?.name}
               </h3>
-              <p className="mx-auto w-[80%] font-tertiary text-highlight lg:m-0 lg:w-[50%] lg:text-lg">
-                A launch vehicle or carrier rocket is a rocket-propelled vehicle
-                used to carry a payload from Earth&apos;s surface to space,
-                usually to Earth orbit or beyond. Our WEB-X carrier rocket is
-                the most powerful in operation. Standing 150 metres tall,
-                it&aspos;s quite an awe-inspiring sight on the launch pad!
+              <p className="mx-auto w-[80%]  font-tertiary text-highlight lg:m-0 lg:w-[50%] lg:text-lg">
+                {datas?.description}
               </p>
             </div>
           </div>
