@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import { useRouter } from "next/router";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,6 +57,29 @@ const Navbar = () => {
       link: "/technology/launch-vehicle",
     },
   ];
+
+  const variants = {
+    initialPosition: {
+      x: "100vw",
+    },
+    isOpen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.08,
+        duration: 0.8,
+      },
+    },
+    isClose: {
+      x: "100vw",
+      opacity: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.08,
+        duration: 0.8,
+      },
+    },
+  };
   return (
     <nav className="fixed top-0 z-50 flex w-full items-center justify-between p-5">
       <Image src="/assets/shared/logo.svg" height={48} width={48} />
@@ -85,32 +109,39 @@ const Navbar = () => {
           <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
         </svg>
       )}
-      {isOpen && (
-        <div className="absolute right-0 top-0 z-40 h-screen w-[70%] bg-white/10 backdrop-blur-lg">
-          <div className="flex h-[70%] flex-col justify-center gap-y-8 pl-16">
-            <Link href="/">
-              <div
-                className={`cursor-pointer space-x-2 ${
-                  asPath === "/" ? "border-white" : ""
-                }`}>
-                <span className="font-bold">00</span>
-                <span className="text-navText font-thin">HOME</span>
-              </div>
-            </Link>
-            {data.map((item, count) => {
-              return (
-                <MobileLink
-                  key={nanoid()}
-                  isActive={item.link}
-                  navCount={`0${count + 1}`}
-                  navText={item.text}
-                  navLink={item.link}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={variants}
+            initial="initialPosition"
+            animate="isOpen"
+            exit="isClose"
+            className="absolute right-0 top-0 z-40 h-screen w-[70%] bg-white/10 backdrop-blur-lg">
+            <div className="flex h-[70%] flex-col justify-center gap-y-8 pl-16">
+              <Link href="/">
+                <div
+                  className={`cursor-pointer space-x-2 ${
+                    asPath === "/" ? "border-white" : ""
+                  }`}>
+                  <span className="font-bold">00</span>
+                  <span className="text-navText font-thin">HOME</span>
+                </div>
+              </Link>
+              {data.map((item, count) => {
+                return (
+                  <MobileLink
+                    key={nanoid()}
+                    isActive={item.link}
+                    navCount={`0${count + 1}`}
+                    navText={item.text}
+                    navLink={item.link}
+                  />
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {/* Tablet and Desktop Menu */}
       <div className="absolute  right-0 top-0 z-20  hidden w-max  justify-center gap-x-6 bg-white/10 px-6 backdrop-blur-md md:flex lg:static">
         <div className="absolute top-0 bottom-0 -left-[97%] z-30 m-auto hidden  h-[1px] w-full bg-[#979797] lg:block" />
