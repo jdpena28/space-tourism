@@ -1,7 +1,7 @@
 import { StringifyOptions } from "querystring";
 
 // [planet].tsx
-interface dataProps {
+interface planetProps {
   name: string;
   images: {
     png: string;
@@ -35,4 +35,4 @@ interface equipmentProps {
   description: string;
 }
 
-export { dataProps, teamProps, equipmentProps };
+export { planetProps, teamProps, equipmentProps };
