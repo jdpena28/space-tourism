@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { NextPage } from "next";
 import { planetProps } from "@/types/main";
 import data from "@/data.json";
+import Tabs from "@/components/Tabs";
 
 const Planet: NextPage = () => {
   const router = useRouter();
@@ -40,6 +41,7 @@ const Planet: NextPage = () => {
             />
           </div>
           <div className="flex w-full flex-col gap-y-5 lg:items-start">
+            <Tabs />
             <h3 className="text-heading3 uppercase">{datas?.name}</h3>
             <p className="mx-auto w-[80%] text-center  font-tertiary leading-7 md:w-[70%] lg:mx-0 lg:text-left">
               {datas?.description}
