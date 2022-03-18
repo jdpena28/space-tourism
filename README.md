@@ -19,6 +19,6 @@ I have alloted 2 weeks for mobile approach and 2 weeks for desktop approach to c
 
 #### Conclusion
 
-🚧WIP🚧
+In using Tailwind CSS the best way to use is the mobile first approach as tailwind out of the box is a mobile first approach subjectively for me. It has a less class and takes me almost only one week different with Desktop First Approach struggle comes when I am designing for mobile view. Of course this is subjective for each of us preparation and logic comes in way first.
 
 Design based on Frontend Mentor Challenge the [Multi Page Space Tourism Website](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-multipage-website-X1UUYHPP1)
